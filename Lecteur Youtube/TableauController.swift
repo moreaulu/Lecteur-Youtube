@@ -14,22 +14,35 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
     @IBOutlet weak var TableView: UITableView!
     
     var chansons = [Chanson]()
+    let identifiantCell = "ChansonCell"
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         TableView.delegate = self
         TableView.dataSource = self
+        ajouterChanson()
 
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return chansons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let chanson = chansons[indexPath.row]
+        //On reutilise les cellules lorsqu'elles ont été scrollées pour ne pas saturer la memoire:
+        if let cell = tableView.dequeueReusableCell(withIdentifier: identifiantCell) as? ChansonCell {
+            cell.creerCell(chanson)
+            return cell
+        }
         return UITableViewCell()
     }
+    
+    //definition de la hauteur des cellules:
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 170
+    }
+    
     
     func ajouterChanson() {
         //On s'assure que l'array de chansons est vide
@@ -50,6 +63,9 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
         chansons.append(g)
         let h = Chanson(artiste: "Dead can Dance", titre: "The snake and the moon", code: "nAuiMUce0kI")
         chansons.append(h)
+        
+        //Recharger si besoin la tableview
+        //tableView.reloadData()
         
     }
 }

@@ -12,6 +12,7 @@
 		84918B872209B08300BF3BB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84918B852209B08300BF3BB7 /* Main.storyboard */; };
 		84918B892209B08600BF3BB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84918B882209B08600BF3BB7 /* Assets.xcassets */; };
 		84918B8C2209B08600BF3BB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84918B8A2209B08600BF3BB7 /* LaunchScreen.storyboard */; };
+		849CE623221440DE00A3BD43 /* ChansonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849CE622221440DE00A3BD43 /* ChansonCell.swift */; };
 		84ED6973220A36AB00D690CA /* TableauController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ED6972220A36AB00D690CA /* TableauController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		84918B882209B08600BF3BB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84918B8B2209B08600BF3BB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84918B8D2209B08600BF3BB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849CE622221440DE00A3BD43 /* ChansonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChansonCell.swift; sourceTree = "<group>"; };
 		84ED6972220A36AB00D690CA /* TableauController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableauController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +60,7 @@
 			children = (
 				84918B812209B08300BF3BB7 /* AppDelegate.swift */,
 				84918B852209B08300BF3BB7 /* Main.storyboard */,
+				849CE622221440DE00A3BD43 /* ChansonCell.swift */,
 				84ED6972220A36AB00D690CA /* TableauController.swift */,
 				84918B882209B08600BF3BB7 /* Assets.xcassets */,
 				84918B8A2209B08600BF3BB7 /* LaunchScreen.storyboard */,
@@ -140,6 +143,7 @@
 			files = (
 				84ED6973220A36AB00D690CA /* TableauController.swift in Sources */,
 				84918B822209B08300BF3BB7 /* AppDelegate.swift in Sources */,
+				849CE623221440DE00A3BD43 /* ChansonCell.swift in Sources */,
 				8474EE90220B03CC000BFB07 /* Chanson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

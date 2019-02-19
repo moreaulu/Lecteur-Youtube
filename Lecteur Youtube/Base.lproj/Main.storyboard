@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,6 +22,43 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5cW-n8-Jxt">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChansonCell" rowHeight="166" id="pbW-kL-r4P" customClass="ChansonCell" customModule="Lecteur_Youtube" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="166"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pbW-kL-r4P" id="Tjd-lu-a9l">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="165.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QCJ-R5-BiX">
+                                                    <rect key="frame" x="8" y="7.5" width="150" height="150.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="2vr-mu-1D1"/>
+                                                        <constraint firstAttribute="height" constant="150" id="4xP-Sy-HYT"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vv-NL-9UW">
+                                                    <rect key="frame" x="166" y="5" width="194" height="143"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4vv-NL-9UW" firstAttribute="top" secondItem="Tjd-lu-a9l" secondAttribute="top" constant="5" id="15V-GG-Omg"/>
+                                                <constraint firstItem="4vv-NL-9UW" firstAttribute="bottom" secondItem="Tjd-lu-a9l" secondAttribute="bottomMargin" constant="5" id="8qI-3S-79V"/>
+                                                <constraint firstItem="4vv-NL-9UW" firstAttribute="trailing" secondItem="Tjd-lu-a9l" secondAttribute="trailingMargin" constant="5" id="Djd-cm-kbQ"/>
+                                                <constraint firstItem="QCJ-R5-BiX" firstAttribute="centerY" secondItem="Tjd-lu-a9l" secondAttribute="centerY" id="ECp-7R-oRs"/>
+                                                <constraint firstItem="4vv-NL-9UW" firstAttribute="leading" secondItem="QCJ-R5-BiX" secondAttribute="trailing" constant="8" id="aAj-t8-Edk"/>
+                                                <constraint firstItem="QCJ-R5-BiX" firstAttribute="leading" secondItem="Tjd-lu-a9l" secondAttribute="leading" constant="8" id="jxf-7M-2L6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artisteEtTitreLabel" destination="4vv-NL-9UW" id="MX3-BB-SQf"/>
+                                            <outlet property="miniature" destination="QCJ-R5-BiX" id="GbD-dS-Mdk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,4 +98,7 @@
             <point key="canvasLocation" x="382" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="960" height="553"/>
+    </resources>
 </document>
