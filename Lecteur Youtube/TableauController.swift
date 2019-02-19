@@ -21,6 +21,7 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
         TableView.delegate = self
         TableView.dataSource = self
         ajouterChanson()
+        title = "Mes videos préférées"
 
     }
 
@@ -40,7 +41,7 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     //definition de la hauteur des cellules:
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 150
     }
     
     
