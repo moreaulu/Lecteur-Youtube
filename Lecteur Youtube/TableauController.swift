@@ -15,6 +15,7 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     var chansons = [Chanson]()
     let identifiantCell = "ChansonCell"
+    let identifiantSegue = "VersVideo"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +45,20 @@ class TableauController: UIViewController, UITableViewDelegate, UITableViewDataS
         return 150
     }
     
+    //Gestion de la segue (lien avec la vue tableau, permet de faire passer les données d'une vue à une autre):
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chanson = chansons[indexPath.row]
+        performSegue(withIdentifier: identifiantSegue, sender: chanson)
+    }
+    //preparation de la segue:
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == identifiantSegue {
+            if let nouveauController = segue.destination as? VideoController {
+                nouveauController.chanson = sender as? Chanson
+                
+            }
+        }
+    }
     
     func ajouterChanson() {
         //On s'assure que l'array de chansons est vide
